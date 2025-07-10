@@ -1,0 +1,30 @@
+{% extends "main/sample.html" %}
+
+{% block title %}Главная страница{% endblock %}
+{% block body %}
+
+<aside>
+        <ul>
+            <a href="admin"><li><img src="static/main/img/home.png">admin</li></a>
+            <a href="setting"><li>setting</li></a>
+            <a href=""><li>account</li></a>
+        </ul>
+</aside>            
+    
+    <div class="box">
+        {% for x in a%}
+
+        <div class="song">
+            <img class="icon" src={{x.img}} >
+            <audio id={{x.name}} src={{x.url}}></audio>
+            <button class="button" onclick="document.getElementById('{{x.name}}').play()">Воспроизвести</button>
+            <button class="button" onclick="document.getElementById('{{x.name}}').pause()">Пауза</button>
+            
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+<script scr="">
+{% endblock %}
