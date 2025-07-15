@@ -5,7 +5,7 @@ body{
 aside{
     float: left;
     background: #181818;
-    width: 20%;
+    width: 15%;
     padding: 2.5%;
     height: 100vh;
     color: #160808;
@@ -33,11 +33,10 @@ aside img{
 }
 
 .box {
-    padding-left: 50px;
-    padding-top: 50px;
+
+    padding: 50px;
     border-radius: 50px;
-    margin-left: auto;
-    margin-right: auto+1px;
+    margin-left: 245px;
     border: 20px;
 
     color: #fff;
@@ -49,20 +48,59 @@ aside img{
 
 .song { 
     color: #fff;
-    background-color: rgb(0, 0, 255);
-    padding: 50px;
+    background-color: rgb(81, 81, 81);
+    padding: 25px;
     border-radius: 50px;
-    margin-left: auto;
-    margin-right: auto+1px;
-    border: 20px;
+    margin: 40px;
+    margin-top: 0px;
+
 }
 
-.button{ 
-    color: #fff;
-    background-color: rgb(0, 0, 255);
-    padding: 50px;
+.icon{ 
+    color: #000000;
+    background-color: rgb(255, 255, 255); 
     border-radius: 50px;
     margin-left: auto;
-    margin-right: auto+1px;
-    border: 20px;
+    margin-right: auto;
+    border: 30px;
+    height: 100px;
+    width: 100px; 
+
+}
+
+.icon img {  
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+
+
+
+button{ 
+    color: #000000;
+    padding: 35px;
+    background-color: rgb(159, 159, 159); 
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 30px;
+}
+
+
+.timeline {
+    background: #E4E9ED;
+    border-radius: 10px;
+    width: 40%;
+    height: 15px;
+    border-top: 100px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.progress{
+    background: #2B3C5B;
+    border-radius: 5px;
+    height: 15px;
+    width: 150px;
 }

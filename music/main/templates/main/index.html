@@ -2,29 +2,30 @@
 
 {% block title %}Главная страница{% endblock %}
 {% block body %}
-
 <aside>
         <ul>
             <a href="admin"><li><img src="static/main/img/home.png">admin</li></a>
             <a href="setting"><li>setting</li></a>
             <a href=""><li>account</li></a>
         </ul>
-</aside>            
-    
+</aside>
     <div class="box">
         {% for x in a%}
-
         <div class="song">
             <img class="icon" src={{x.img}} >
-            <audio id={{x.name}} src={{x.url}}></audio>
-            <button class="button" onclick="document.getElementById('{{x.name}}').play()">Воспроизвести</button>
-            <button class="button" onclick="document.getElementById('{{x.name}}').pause()">Пауза</button>
-            
+            <audio class="audio" id={{x.name}} src={{x.url}}></audio>
+            <button id="play {{x.name}}" onclick="songg('{{x.name}}',1)">II</button>
+            <button id="pause {{x.name}}" onclick="songg('{{x.name}}',0)" style="display: none;">></button>
+            <div class="timeline">
+                <a class="progress"></a>
+            </div>
+            <button class="button">next</button>
+            <button class="button">back</button>
+            <button id="repeat {{x.name}}" onclick="loop('{{x.name}}')">repeat</button>
+
         </div>
         {% endfor %}
     </div>
-
-
-
-<script scr="">
+    <input type="range" oninput="setUserVolume(this.value)" min="0" max="10" value="5" step="0.1" />
+    <script type="text/javascript" src='static/main/js/main.js'></script>
 {% endblock %}
